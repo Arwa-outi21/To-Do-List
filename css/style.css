@@ -1,0 +1,156 @@
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    color: #1f1f1f;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* notes */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgba(192, 192, 192, 0.219);
+    box-shadow: 1px 1px 1px black;
+}
+
+.container h1 {
+    width: 60%;
+    text-align: center;
+    font-size: 4rem;
+    border-bottom: 2px #1f1f1f dotted;
+    margin: 30px auto;
+}
+
+.notes-section {
+    width: 70%;
+    border-radius: 10px;
+    border: 10px solid gray;
+    position: relative;
+    padding: 20px;
+    background-color: #ffffffff;
+    box-shadow: 1px 1px 20px 0px black;
+}
+
+.container .notes-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.container .notes-section .note-card {
+    width: 100%;
+}
+
+.notes-section .add-value {
+    width: 100%;
+    display: flex !important;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #1f1f1f;
+    border-radius: 20px;
+}
+
+.notes-section .text-input {
+    border: none;
+    outline: none;
+    font-size: 22px;
+    margin-left: 10px;
+    width: 100%;
+    background-color: transparent;
+}
+
+.notes-section .add-value .add {
+    border: none;
+    width: 70px;
+    height: 40px;
+    font-size: 22px;
+    border-radius: 20px;
+    /* margin-right: 10px; */
+    cursor: pointer;
+}
+
+.container .note-card .listItems {
+    min-height: 300px;
+    max-height: 300px;
+    margin: 20px;
+    border-radius: 10px;
+    border: #dab903 1px solid;
+    overflow-y: scroll;
+    box-shadow: 1px 1px 10px 5px black;
+}
+
+.container .note-card .listItems::-webkit-scrollbar {
+    width: 10px;
+    margin-left: 10px;
+}
+
+.container .note-card .listItems::-webkit-scrollbar-thumb {
+    background: #dab903;
+    border-radius: 10px;
+}
+
+
+.container .note-card .listItems li {
+    font-size: 22px;
+    border-bottom: 1px solid #dab903;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 45px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.container .note-card .listItems li:last-child {
+    border: none;
+}
+
+.container .note-card .listItems li i{
+    margin-right: 10px;
+    font-size: 20px;
+    transition: all .3s ease;
+}
+
+.container .note-card .listItems li i:hover {
+    color: red;
+}
+
+.container .note-card .listItems li::before {
+    content: '';
+    background-image: url('../images/unchecked.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translate(5px, -50%);
+}
+
+.container .note-card .listItems li.checked::before {
+    background-image: url('../images/404-tick.png');
+}
